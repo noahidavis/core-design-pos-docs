@@ -1,0 +1,12 @@
+import{j as o}from"./jsx-runtime-D_zvdyIk.js";import{r as i}from"./index-DmM0KDA7.js";import{c as u}from"./utils-mftCjzGE.js";const R=e=>e.padStart(3,"0"),k=e=>{const n=R(e),f=n.slice(-2);return`${n.slice(0,-2).padStart(2,"0")}.${f}`},z=e=>e.replace(/^0+/,"")!=="",w=({rawValue:e,className:n})=>{const y=k(e||"000"),m=z(e),d=i.useRef(null),c=i.useRef(null),[r,h]=i.useState(60);return i.useEffect(()=>{const t=()=>{if(!d.current||!c.current)return;const a=d.current,l=c.current,s=window.getComputedStyle(a),v=parseFloat(s.paddingLeft)||0,b=parseFloat(s.paddingRight)||0,S=v+b,x=a.offsetWidth-S,g=l.scrollWidth;g>x?h(p=>Math.max(p*.9,16)):g<x*.9&&r<60&&h(p=>Math.min(p*1.1,60))};return t(),window.addEventListener("resize",t),()=>window.removeEventListener("resize",t)},[e,r]),o.jsxs("div",{ref:d,className:u("font-brand font-semibold w-full px-6 py-[1.5dvh] rounded-16 flex justify-center items-center bg-core-dark-surface-default-background border border-core-dark-border-default-primary tabular-nums",n),style:{overflow:"hidden"},children:[o.jsx("sup",{className:u("mr-1 align-super",m?"text-core-dark-content-default-primary":"text-core-dark-content-disabled-secondary"),style:{fontSize:`${Math.max(r*.6,12)}px`},children:"$"}),o.jsx("div",{ref:c,style:{fontSize:`${r}px`,whiteSpace:"nowrap"},className:"flex items-center",children:y.split("").map((t,a)=>{const l=t===".",s=m;return o.jsx("span",{className:u(l?"mx-1":"",s?"text-core-dark-content-default-primary":"text-core-dark-content-disabled-secondary"),children:t},a)})})]})};try{w.displayName="KeypadDisplay",w.__docgenInfo={description:`Renders a currency-formatted display (e.g. \`$00.00\`) typically used
+above a numeric keypad in a point-of-sale flow.
+
+The display auto-formats a raw string of digits from right to left,
+enforcing a fixed 2-decimal currency layout. By default, it renders
+as \`$00.00\` with greyed-out text, and transitions to active styles
+(white text) when any non-zero digit is entered.
+
+The dollar sign is superscripted and styled independently, and the
+component is fully controlled via the \`rawValue\` prop.
+
+The text size dynamically scales up or down to fit within its container, preventing overflow.`,displayName:"KeypadDisplay",props:{rawValue:{defaultValue:null,description:'A string of digits representing the raw keypad input.\n\nExample: `"1"` → `$00.01`, `"123"` → `$1.23`',name:"rawValue",required:!0,type:{name:"- string"}}}}}catch{}export{w as K};
