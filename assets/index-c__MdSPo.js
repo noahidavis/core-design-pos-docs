@@ -1,0 +1,4 @@
+import{j as o}from"./jsx-runtime-D_zvdyIk.js";import{c as d}from"./utils-mftCjzGE.js";const t=({label:e,onClick:r,className:a,...n})=>o.jsx("button",{className:d("font-brand-nunito px-[1dvw] py-[3dvh] justify-center items-center rounded-16 bg-core-dark-surface-default-primary active:bg-core-dark-surface-default-primary-pressed text-xl md:text-2xl font-semibold text-core-dark-content-default-primary border border-core-dark-border-default-primary",a),type:"button",onClick:r,...n,children:e});try{t.displayName="KeypadKey",t.__docgenInfo={description:`A single button used within a keypad interface.
+
+Visually styled for touch interfaces (like a POS touchscreen),
+and accepts all native button attributes for full control.`,displayName:"KeypadKey",props:{label:{defaultValue:null,description:'The label displayed inside the button.\n\nCan be a digit (`"1"`), a symbol (`"."`, `"←"`), or any string.',name:"label",required:!0,type:{name:"- string"}}}}}catch{}export{t as K};
